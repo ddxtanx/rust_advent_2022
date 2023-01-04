@@ -6,6 +6,7 @@ mod day4;
 mod day5;
 mod day6;
 mod day7;
+mod day8;
 
 mod tree;
 mod alphabet_nums;
@@ -56,4 +57,6 @@ fn main() {
 
     println!("Day 7 P1: {}", day7::get_largest_dirs());
     println!("Day 7 P2: {}", day7::get_delete_dir());
+
+    println!("Day 8 P1: {}", day8::calculate_visible_trees());
 }

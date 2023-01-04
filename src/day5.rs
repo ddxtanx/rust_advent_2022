@@ -119,7 +119,7 @@ where
 }
 
 pub fn get_leading_chars() -> String {
-    let mut lines = file_lines::get_file_lines("./inputs/day5.txt".to_string()).peekable();
+    let mut lines = file_lines::get_file_lines(&"./inputs/day5.txt".to_string()).peekable();
 
     let mut init_crate_iter = lines.by_ref().take_while(|line| !line.is_empty()).peekable();
     
@@ -139,7 +139,7 @@ pub fn get_leading_chars() -> String {
 }
 
 pub fn get_leading_chars_drag() -> String {
-    let mut lines = file_lines::get_file_lines("./inputs/day5.txt".to_string()).peekable();
+    let mut lines = file_lines::get_file_lines(&"./inputs/day5.txt".to_string()).peekable();
 
     let init_crate_iter = lines.by_ref().take_while(|line| !line.is_empty()).peekable();
     

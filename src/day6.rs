@@ -74,7 +74,7 @@ impl<T> MessageStream<T>
 
 
 pub fn get_start_of_stream() -> usize {
-    let mut file_iter = get_file_lines("./inputs/day6.txt".to_string());
+    let mut file_iter = get_file_lines(&"./inputs/day6.txt".to_string());
     let file_str = file_iter.next().unwrap();
 
     let file_chars = file_str.chars();
@@ -85,7 +85,7 @@ pub fn get_start_of_stream() -> usize {
 }
 
 pub fn get_start_of_message() -> usize {
-    let mut file_iter = get_file_lines("./inputs/day6.txt".to_string());
+    let mut file_iter = get_file_lines(&"./inputs/day6.txt".to_string());
     let file_str = file_iter.next().unwrap();
 
     let file_chars = file_str.chars();

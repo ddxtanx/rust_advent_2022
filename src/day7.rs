@@ -85,7 +85,8 @@ impl Filesystem {
 fn parse_file_to_command_list() -> Vec<Command> {
     let file = "./inputs/day7.txt".to_string();
 
-    let mut lines = file_lines::get_file_lines(file).peekable();
+    let mut lines = file_lines::get_file_lines(&file).peekable();
+
     lines.next();
     let mut command_vec = vec![];
 

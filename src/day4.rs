@@ -1,7 +1,7 @@
 use crate::file_lines;
 
 pub fn num_fully_contained(assign_file: String) -> usize {
-    let lines = file_lines::get_file_lines(assign_file);
+    let lines = file_lines::get_file_lines(&assign_file);
 
     range_iter(lines)
         .filter(|(l1, r1, l2, r2)| ((l1 <= l2 && r1 >= r2) || (l1 >= l2 && r1 <= r2)))
@@ -16,7 +16,7 @@ where
 }
 
 pub fn partially_contained(assign_file: String) -> usize {
-    let lines = file_lines::get_file_lines(assign_file);
+    let lines = file_lines::get_file_lines(&assign_file);
 
     range_iter(lines)
         .filter(|(l1, r1, l2, r2)| (l1 <= l2 && r1 >= l2) || (l1 >= l2 && l1 <= r2))
